@@ -1,0 +1,71 @@
+1. Run the commands sort, wc and uniq on the commands.js file. Explain how they 
+work and what the output was.
+
+Sort - sorts each line alphabetically and shows them in order (but space and slash come before 
+the letters alphabetically, so the first line shown is the one with the most spaces
+
+ done(data);
+      if (err) throw err;
+    // echo functionality
+    break;
+    break;
+    case "cat":
+    case "echo":
+    commandLibrary.cat(userInputArray.slice(1));
+    commandLibrary.echo(userInputArray.slice(1).join(" "));
+    const fileName = fullPath[0];
+    done(userInput);
+    fs.readFile(fileName, (err, data) => {
+    process.stdout.write('\nprompt > ');
+    process.stdout.write(output);
+    });
+  "cat": function(fullPath) {
+  "echo": function(userInput) {
+  //the echo command
+  const command = userInputArray[0];
+  const userInputArray = userInput.split(" ");
+  switch(command) {
+  }
+  }
+  },
+ //parses the user input to understand which command was typed
+//where we will store our commands
+//where we will store the logic of our commands
+//write out data
+const commandLibrary = {
+const fs = require("fs");
+function done(output) {
+function evaluateCmd(userInput) {
+module.exports.commandLibrary = commandLibrary;
+module.exports.evaluateCmd = evaluateCmd;
+}
+}
+};
+
+
+wc -  output ` 42  106 1031 commands.js` the line count, word count and byte count
+
+uniq - shows every unique line, which in this case is just the whole file contents
+because we don't have repeated statements in this so far
+
+2. Using the pipe (|) connect at least two commands and run it on commands.js. 
+Explain what the output was and why the specific data was outputted.
+
+ran uniq commands.js | wc  
+the output was 42 106 1031   because we sorted the original for duplicate lines, but there were
+none, so we ended up with the same counts as we got earlier for the original file. It didn't
+include the commands.js as the end as we got with just the wc command, because we weren't running
+wc on the file commands.js, we were running it on the sorted version of the file from the previous command
+
+
+6.
+
+
+function reverseString(inputString) {
+  let splitArray = inputString.split(" ");
+  splitArray.forEach((element) => {
+    element.split('').reverse().join('');
+  });
+}
+
+reverseString("hello there");
