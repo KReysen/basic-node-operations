@@ -61,11 +61,27 @@ wc on the file commands.js, we were running it on the sorted version of the file
 6.
 
 
-function reverseString(inputString) {
-  let splitArray = inputString.split(" ");
-  splitArray.forEach((element) => {
-    element.split('').reverse().join('');
-  });
-}
+var inputString = "I'm learning to program algorithms!";
 
-reverseString("hello there");
+function reverseString(inputString){
+  // split into an array of each character
+var splitInput = inputString.split("");
+// reverse the order of all the characters
+splitInput.reverse();
+// join characters back into string of reversed words, reversed order
+let backWords = splitInput.join("");
+// split into an array of reversed words, reversed order
+let backArray = backWords.split(" ");
+// put each word into an array in the correct order
+let finalArray = [];
+  backArray.forEach((element) => {
+   finalArray.unshift(element);
+  });
+  // join back into a string
+  var reversedString = finalArray.join(" ");
+  return reversedString;
+}
+// test
+console.log(reverseString(inputString));
+
+// returns 'm'I gninrael ot margorp !smhtirogla'
